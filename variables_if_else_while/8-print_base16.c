@@ -3,16 +3,19 @@
 /**
  * main - Entry point of the program
  *
- * Description: Prints all single digit numbers of base 10 starting from 0
+ * Description: Prints all numbers of base 16 in lowercase
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int digit;
+int n;
 
-for (digit = 0; digit <= 16; digit++)
+for (n = 0; n < 16; n++)
 {
-putchar(digit + '0');
+if (n < 10)
+putchar(n + '0');
+else
+putchar(n - 10 + 'a');
 }
 putchar('\n');
 
