@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - Entry point of the program
+ * print_alphabet_x10 - Entry point of the program
  *
  * Description: Prints a quote using the puts function
  * Return: Always 0 (Success)
