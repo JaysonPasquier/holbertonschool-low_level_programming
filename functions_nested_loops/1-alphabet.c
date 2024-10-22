@@ -8,16 +8,14 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
-{
-   void print_alphabet(void)
-{
-   const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 
-   while (*alphabet)
-   {
-      _putchar(*alphabet++);
-   }
+void print_alphabet(void)
+{
+const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
+
+while (*alphabet)
+{
+_putchar(*alphabet++);
 }
-   return (0);
 }
+return (0);
