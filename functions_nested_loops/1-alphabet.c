@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-
-
 /**
  * print_alphabet - Prints the lowercase alphabet
  *
@@ -17,6 +15,7 @@ while (alphabet <= 'z')
 _putchar(alphabet);
 alphabet++;
 }
+_putchar('\n');
 }
 
 
