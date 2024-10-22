@@ -1,16 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-int print_alphabet(void)
-{
-   const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
-
-   while (*alphabet)
-   {
-      _putchar(*alphabet++);
-   }
-}
-
 /**
  * main - Entry point of the program
  *
@@ -20,5 +10,14 @@ int print_alphabet(void)
 
 int main(void)
 {
+   int print_alphabet(void)
+{
+   const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
+
+   while (*alphabet)
+   {
+      _putchar(*alphabet++);
+   }
+}
    return (0);
 }
