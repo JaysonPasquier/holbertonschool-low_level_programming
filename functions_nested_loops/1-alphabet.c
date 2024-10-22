@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- * print_alphabet - Prints the lowercase alphabet
- *
- * Descritpion : Prints lowercase alphabet followed by a new line
- */
+int print_alphabet(void)
+{
+   const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 
+   while (*alphabet)
+   {
+      _putchar(*alphabet++);
+   }
+}
 
 /**
  * main - Entry point of the program
@@ -17,15 +20,5 @@
 
 int main(void)
 {
-int print_alphabet(void)
-{
-const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
-
-while (*alphabet)
-{
-_putchar(*alphabet++);
-}
-}
-print_alphabet();
-return (0);
+   return (0);
 }
