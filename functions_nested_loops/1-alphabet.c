@@ -17,7 +17,7 @@
 
 int main(void)
 {
-void print_alphabet(void)
+int print_alphabet(void)
 {
 const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 
