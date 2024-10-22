@@ -1,6 +1,25 @@
 #include <stdio.h>
 #include "main.h"
 
+
+
+/**
+ * print_alphabet - Prints the lowercase alphabet
+ *
+ * Descritpion : Prints lowercase alphabet followed by a new line
+ */
+void print_alphabet(void)
+{
+char alphabet = 'a';
+
+while (alphabet <= 'z')
+{
+_putchar(alphabet);
+alphabet++;
+}
+}
+
+
 /**
  * main - Entry point of the program
  *
