@@ -17,5 +17,4 @@ while (*alphabet)
 {
 _putchar(*alphabet++);
 }
- return(0);
 }
