@@ -8,14 +8,12 @@
  */
 void print_alphabet(void)
 {
-char alphabet = 'a';
+const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
 
-while (alphabet <= 'z')
+while (*alphabet)
 {
-_putchar(alphabet);
-alphabet++;
+_putchar(*alphabet++);
 }
-_putchar('\n');
 }
 
 
