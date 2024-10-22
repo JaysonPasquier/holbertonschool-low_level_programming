@@ -6,15 +6,6 @@
  *
  * Descritpion : Prints lowercase alphabet followed by a new line
  */
-void print_alphabet(void)
-{
-const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
-
-while (*alphabet)
-{
-_putchar(*alphabet++);
-}
-}
 
 
 /**
@@ -26,6 +17,16 @@ _putchar(*alphabet++);
 
 int main(void)
 {
-print_alphabet();
+void print_alphabet(void)
+{
+const char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
+
+while (*alphabet)
+{
+_putchar(*alphabet++);
+}
+}
+
+ print_alphabet();
 return (0);
 }
