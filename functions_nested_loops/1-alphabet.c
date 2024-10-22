@@ -26,7 +26,6 @@ while (*alphabet)
 _putchar(*alphabet++);
 }
 }
-
- print_alphabet();
+print_alphabet();
 return (0);
 }
