@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _isdigit - Checks if a character is a number 
+ * _isdigit - Checks if a character is a number
  * @c: The character to check
  *
  * Return: 1 if c is a digit, 0 otherwise
