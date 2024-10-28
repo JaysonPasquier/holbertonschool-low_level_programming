@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * Fizz_Buzz - Functions.
+ * main - Functions.
  *
  * Description: print number to 100
  * Return: 0
