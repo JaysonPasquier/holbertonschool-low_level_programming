@@ -33,5 +33,5 @@ capitalize_next = 1;
 i++;
 }
 
-return str;
+return (str);
 }
