@@ -3,10 +3,9 @@
 
 /**
  * _strspn - the main function
- * @i: int i
- * @j: int j
- * @found: int found
- * @count: unsigned int count
+ * @s: char s
+ * @accept: char accept
+ *
  *
  * Description: gets the length of a prefix substring
  * Return: return count
