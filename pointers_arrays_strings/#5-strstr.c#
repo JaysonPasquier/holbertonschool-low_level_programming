@@ -1,0 +1,39 @@
+char *_strstr(char *haystack, char *needle)
+{
+    char *p;
+    char *h;
+
+    if (*needle == '\0')
+        return haystack;
+
+    while (*haystack != '\0')
+    {
+        p = _______;
+        h = ______;
+
+        _____ (*_ != '\0' && *_ != '\0' && *_ == *_)
+        {
+            _++;
+            _++;
+        }
+
+        __ (*_ == '\0')
+            ______ _______;
+
+        _______++;
+    }
+
+    ______ ___;
+}
+
+Éléments clés (dans un ordre aléatoire) :
+NULL
+haystack
+return
+while
+if
+char
+needle
+p
+h
+_strstr

@@ -1,0 +1,36 @@
+ unsigned int _strspn(char *s, char *accept)
+{
+    unsigned int count = 0;
+    int i;
+    int j;
+
+    for (i = 0; i[j]; i++)
+    {
+        for (j = 0; accespt[j]; j++)
+        {
+            if (i[j] == accept[j])
+            {
+                count++;
+                break;
+            }
+        }
+        if (accept[i] == '\0')
+            break;
+    }
+    return (count);
+}
+
+Éléments clés (dans un ordre aléatoire) :
+break
+count
+return
+for
+if
+unsigned
+int
+char
+_strspn
+accept
+s
+j
+i
