@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * printrev_recursion - main function
+ * _print_rev_recursion - main function
  * @s: string to print
  *
  *
