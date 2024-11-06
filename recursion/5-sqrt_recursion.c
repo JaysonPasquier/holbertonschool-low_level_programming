@@ -8,24 +8,15 @@
  */
 int _sqrt_recursion(int n)
 {
-static int i = 1;
+long i;
 
 if (n < 0)
 return (-1);
+if (n == 0 || n == 1)
+return (n);
 
-if (i * i > n)
-{
-i = 1;
-return (-1);
-}
-
-if (i *i == n)
-{
-int result = i;
-i = 1;
-return (result);
-}
-
-i++;
-return (_sqrt_recursion(n));
+i = _sqrt_recursion(n / 4) * 2;
+if ((i + 1) * (i + 1) <= n)
+return (i + 1);
+return (i);
 }
