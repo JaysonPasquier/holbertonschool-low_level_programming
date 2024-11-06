@@ -9,12 +9,13 @@
 int is_prime_number(int n)
 {
 static int i = 2;
+
 if (n <= 1)
 {
 i = 2;
 return (0);
 }
-if (i * i > n)
+if (i *i > n)
 {
 i = 2;
 return (1);
