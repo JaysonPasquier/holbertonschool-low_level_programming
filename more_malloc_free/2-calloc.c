@@ -1,14 +1,15 @@
 #include <stdlib.h>
 #include <string.h>
-/**
- * _calloc - main function
- * @nmemb: unsigned int nmemb
- * @size: unsigned int size
- *
- * Description: allocates memory for an array, using malloc
- * Return: return NULL or ptr
- */
 
+/**
+ * _calloc - allocates memory for an array, using malloc
+ * @nmemb: number of elements
+ * @size: size of each element
+ *
+ * Description: allocates memory for an array of nmemb elements of size bytes
+ * each and initializes the memory to zero.
+ * Return: pointer to the allocated memory, or NULL if failure.
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
