@@ -1,41 +1,77 @@
-#include "dog.h"
 #include <stdlib.h>
 #include <string.h>
+#include "dog.h"
+
+static dog_t **all_dogs;
+static int dog_count;
 
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner's name
+ * free_all_dogs - Frees all allocated dogs
+ */
+void free_all_dogs(void)
+{
+	int i;
+
+	for (i = 0; i < dog_count; i++)
+	{
+		if (all_dogs[i])
+		{
+			free(all_dogs[i]->name);
+			free(all_dogs[i]->owner);
+			free(all_dogs[i]);
+		}
+	}
+	free(all_dogs);
+}
+
+/**
+ * new_dog - Creates a new dog
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
  *
- * Return: pointer to new dog_t struct, or NULL if it fails
+ * Return: Pointer to the new dog (Success), NULL otherwise
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *dog;
+	int len1, len2;
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
+	if (!all_dogs)
+		atexit(free_all_dogs);
+
+	len1 = strlen(name);
+	len2 = strlen(owner);
+
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
 
-	new_dog->name = malloc(strlen(name) + 1);
-	if (new_dog->name == NULL)
+	dog->name = malloc(sizeof(char) * (len1 + 1));
+	if (dog->name == NULL)
 	{
-		free(new_dog);
+		free(dog);
 		return (NULL);
 	}
-	strcpy(new_dog->name, name);
-
-	new_dog->owner = malloc(strlen(owner) + 1);
-	if (new_dog->owner == NULL)
+	dog->owner = malloc(sizeof(char) * (len2 + 1));
+	if (dog->owner == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-	strcpy(new_dog->owner, owner);
+	strcpy(dog->name, name);
+	strcpy(dog->owner, owner);
+	dog->age = age;
 
-	new_dog->age = age;
-
-	return (new_dog);
+	all_dogs = realloc(all_dogs, sizeof(dog_t *) * (dog_count + 1));
+	if (all_dogs == NULL)
+	{
+		free(dog->name);
+		free(dog->owner);
+		free(dog);
+		return (NULL);
+	}
+	all_dogs[dog_count++] = dog;
+	return (dog);
 }

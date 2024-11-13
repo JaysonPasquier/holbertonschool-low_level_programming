@@ -2,10 +2,10 @@
 #define DOG_H
 
 /**
- * struct dog - Structure définissant un chien avec des informations de base
- * @name: Nom du chien
- * @age: Âge du chien
- * @owner: Propriétaire du chien
+ * struct dog - Structure defining a dog with basic information
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner's name
  */
 typedef struct dog {
     char *name;
